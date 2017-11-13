@@ -1,1 +1,24 @@
-Map.css
+img {
+	width: 400px;
+	height: 600px;
+}
+
+body {
+	height: 100%;
+	width: device-width;
+	margin: 0;
+	
+}
+
+div {
+	background-color: white;
+	height: 100%;
+	width: device-width;
+	margin: 0;
+}
+
+#map {
+  height: 600px;
+  margin-top: 20px;
+}
+

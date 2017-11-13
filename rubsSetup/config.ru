@@ -13,6 +13,6 @@ require './models/UserModel'
 
 
 map('/') {run ApplicationController}
-map('/books') {run BooksController}
+map('/books') {run BookController}
 map('/location') {run LocationController}
 map('/user') {run UserController}

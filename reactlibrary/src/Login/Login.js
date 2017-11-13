@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
 import './Login.css'
+import NewUser from '../NewUser/New.js';
+
 
 
 
@@ -16,10 +18,13 @@ export class Login extends Component {
 		return(
 			<div >
 				<form >
-					<input/>
+					Username: <input/><br/>
+					Password: <input/><br/>
 					<button>Login</button>
 
 				</form>
+
+				<NewUser />
 			</div>
 			)
 	}

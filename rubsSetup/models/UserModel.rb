@@ -1,7 +1,7 @@
-class USer < ActibveRecord::Base
+class User < ActiveRecord::Base
 
 
-	has_many :books
+	has_many :book
 
 	has_secure_password
 

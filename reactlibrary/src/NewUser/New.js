@@ -1,4 +1,4 @@
-import React { Component } from 'react';
+import React, { Component } from 'react';
 
 
 
@@ -14,7 +14,14 @@ export class NewUser extends Component{
 		return(
 
 			<div>
-				<p>New User Form</p>
+				<form>
+					<p>New User Form</p>
+					Username: <input /><br/>
+					Password: <input /><br/>
+					<button>Picture Upload</button>
+					<button >Submit</button>
+					
+				</form>
 			</div>
 
 			)
