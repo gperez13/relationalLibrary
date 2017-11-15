@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import GoogleMap from 'google-map-react';
+import Page from '../Page/Page.js'
+
+
+
 
 class Mapp extends Component {
   constructor() {
@@ -14,13 +18,17 @@ class Mapp extends Component {
   
   render() {
     const style = {
-      width: '400px',
-      height: '400px'
+      width: '100%',
+      height: '100%',
+      // display: 'flex',
+      // flex: 1
     }
     return(
-      <div style={{height: "400px", width: "400px"}}>
+      <div style={{height: "400px", width: "400px", padding: "0", margin: "0"}}>
+
         <GoogleMap
         style={style}
+     	resetBoundsOnResize = {true}
         bootstrapURLKeys={{
           key: 'AIzaSyBERkSwB1_8brGNdcq4kAH-Jbw5P527Kkc',
           language: 'en'
@@ -28,6 +36,11 @@ class Mapp extends Component {
         defaultCenter={this.state.center}
         defaultZoom={this.state.zoom}
         >
+
+
+
+
+
         </GoogleMap>
       </div>
     )

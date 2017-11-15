@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Login from './Login/Login.js';
-import Mapp from './Map/Map.js';
+import Page from './Page/Page.js';
 
 class App extends Component {
 
@@ -29,7 +29,7 @@ class App extends Component {
       <h1>Chicago Community Library</h1>
 
 
-      {this.state.isLoggedIn ?  <Mapp /> : <Login />}
+      {this.state.isLoggedIn ?  <Page /> : <Login />}
 
  
        
