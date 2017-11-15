@@ -1,42 +1,37 @@
 import React, { Component } from 'react';
-import './Map.css';
-import Profile from '../Profile/Profile.js';
-import Listings from '../AllListings/Listings.js';
+import GoogleMap from 'google-map-react';
 
+class Mapp extends Component {
+  constructor() {
+    super();
+    this.state = {
+      center: {lat: 41.8781, lng: -87.6298},
+      zoom: 10
+    
+    }
+  }
 
-
-
-export class Map extends Component{
-
-	constructor (){
-		super()
-		this.state ={
-			listingsAvailable: false,
-		}
-	}
-
-
-
-	render(){
-
-
-
-
-		return(
-
-			<div>
-				<span>
-					<Profile />
-						<p>Mapping Image</p>
-						<img src="http://www.chicago-l.org/maps/route/maps/1995map.jpg"/>
-
-					<Listings />
-				</span>
-			</div>
-
-			)
-	}
+  
+  render() {
+    const style = {
+      width: '400px',
+      height: '400px'
+    }
+    return(
+      <div style={{height: "400px", width: "400px"}}>
+        <GoogleMap
+        style={style}
+        bootstrapURLKeys={{
+          key: 'AIzaSyBERkSwB1_8brGNdcq4kAH-Jbw5P527Kkc',
+          language: 'en'
+        }}
+        defaultCenter={this.state.center}
+        defaultZoom={this.state.zoom}
+        >
+        </GoogleMap>
+      </div>
+    )
+  }
 }
 
-
-export default Map;
+export default Mapp;
