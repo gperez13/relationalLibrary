@@ -24,13 +24,13 @@ class Mapp extends Component {
       // flex: 1
     }
     return(
-      <div style={{height: "400px", width: "400px", padding: "0", margin: "0"}}>
+      <div style={{height: "800px", width: "1000px", padding: "0", margin: "0", float: "both"}}>
 
         <GoogleMap
         style={style}
      	resetBoundsOnResize = {true}
         bootstrapURLKeys={{
-          key: 'AIzaSyBERkSwB1_8brGNdcq4kAH-Jbw5P527Kkc',
+          key: 'AIzaSyAdgdOZrv0EWt8EmgY6c_g98zIX9JBULS8',
           language: 'en'
         }}
         defaultCenter={this.state.center}
