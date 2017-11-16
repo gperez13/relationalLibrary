@@ -11,18 +11,20 @@ class Page extends Component{
 
 	render(){
 
+		console.log(Array.isArray(this.props.books), ' tjis', this.props.books[0])
+
 		return(
 
 
-				<div  class="container" id="main" >
-					<div class="row">
-						<div class="col-md-4">
+				<div  className="container" id="main" >
+					<div className="row">
+						<div className="col-md-4">
 							<Profile />
 							<hr/>
 							<button onClick={this.props.logout}>Logout</button>
 						</div>
 
-						<div class="col-md-8">
+						<div className="col-md-8">
 							<Mapp books={this.props}/>
 						</div>
 					</div>

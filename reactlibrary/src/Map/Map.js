@@ -4,10 +4,7 @@ import Page from '../Page/Page.js'
 
 
 
-  const AnyReactComponent = ({ text }) => <div id="map-marker" style={{
-    position: 'relative', color: '#B10DC9', background: '#DDDDDD',
-    height: 40, width: 60, top: -20, left: -30,     
-  }}>{text}</div>;
+
 
   const createMapOptions = (maps) =>{
     return {
@@ -249,7 +246,12 @@ class Mapp extends Component {
     }
   }
 
-
+renderMarkers = (map, maps) => {
+  const marker = new maps.Marker({        
+    position: {lat: 41.8781, lng: -87.6298},
+    map,
+      });
+}
 
   
   render() {
@@ -270,11 +272,18 @@ const greatPlaceStyle = {
 
 
 
-console.log(this.props.books.books.Extracts)
+console.log(this.props.books.books[0])
 
+const booksAvailable = this.props.books.books.map((book, i)=>{
+  return <div key={i}>
+          <li>{book.title}</li>
+          </div>
+})
 
-
-
+  const AnyReactComponent = ({ text }) => <div id="map-marker" style={{
+    position: 'relative', color: '#B10DC9', background: '#DDDDDD',
+    height: 200, width: 120, top: -20, left: -30,     
+  }}>{booksAvailable}</div>;
 
     return(
       <div style={{height: "800px", width: "100%", padding: "0", margin: "0", float: "both"}}>
@@ -287,17 +296,22 @@ console.log(this.props.books.books.Extracts)
           key: 'AIzaSyAdgdOZrv0EWt8EmgY6c_g98zIX9JBULS8',
           language: 'en'
         }}
+        onGoogleApiLoaded={({map, maps}) => this.renderMarkers(map, maps)}
         defaultCenter={this.state.center}
         defaultZoom={this.state.zoom}
+
         >
 
 
 
          <AnyReactComponent 
-          lat={41.8781}
-          lng={-87.6298}
-          text={'Kreyser Avrora'}
+          lat={41.8833}
+          lng={-87.6258}
+         
+
         />
+
+   
 
         </GoogleMap>
       </div>

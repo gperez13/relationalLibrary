@@ -18,8 +18,10 @@ class App extends Component {
     fetch('http://extracts.panmacmillan.com/getextracts?authorcontains=tony')
     .then(response => response.json())
     .then(data => {
+      console.log(data, ' what is data', typeof(data), Array.isArray(data), Array.isArray(data.Extracts))
       const state = this.state;
-      state.books = data;
+      state.books = data.Extracts;
+      console.log(this, ' this is this', state, ' this is state')
       this.setState(state)
     })
     console.log(this.state)
