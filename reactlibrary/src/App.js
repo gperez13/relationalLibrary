@@ -14,10 +14,28 @@ class App extends Component {
       location: []
     }
   }
+    componentDidMount(){
+    fetch('http://extracts.panmacmillan.com/getextracts?authorcontains=tony')
+    .then(response => response.json())
+    .then(data => {
+      const state = this.state;
+      state.books = data;
+      this.setState(state)
+    })
+
+  }
 
 
-
-
+  login = (e) => {
+    const state = this.state;
+    state.isLoggedIn = true;
+    this.setState(state);
+  }
+  logout = (e) =>{
+    const state = this.state;
+    state.isLoggedIn = false;
+    this.setState(state);
+  }
 
 
 
@@ -27,9 +45,10 @@ class App extends Component {
 
       <br/><br/>
       <h1>Chicago Community Library</h1>
+      <br/><br/><br/>
 
 
-      {this.state.isLoggedIn ?  <Page /> : <Login />}
+      {this.state.isLoggedIn ?  <Page logout={this.logout} books={this.state.books}/> : <Login login={this.login}/>}
 
  
        

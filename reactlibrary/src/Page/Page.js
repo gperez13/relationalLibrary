@@ -12,21 +12,23 @@ class Page extends Component{
 	render(){
 
 		return(
-			<div>
 
 
+				<div  class="container" id="main" >
+					<div class="row">
+						<div class="col-md-4">
+							<Profile />
+							<hr/>
+							<button onClick={this.props.logout}>Logout</button>
+						</div>
 
-				<div class="main">
-
-					<Profile />
-					<hr/>
-					<p>This is going to be a Listings Link</p>
-
-
-					<Mapp />
+						<div class="col-md-8">
+							<Mapp />
+						</div>
+					</div>
 				</div>
 
-			</div>
+
 			)
 	}
 

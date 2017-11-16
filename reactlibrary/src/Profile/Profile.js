@@ -7,15 +7,16 @@ export class Profile extends Component{
 
 
 	render(){
-
+		console.log(this.props)
 
 
 
 		return(
 
-			<div>
-				<p>Profile, Image, etc</p>
+			<div id="profile">
 				<h3>My Books</h3>
+
+
 
 				<li>Slaughterhouse Five</li>
 				<li>Cat's Cradle</li>

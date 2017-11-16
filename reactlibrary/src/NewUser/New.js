@@ -13,13 +13,13 @@ export class NewUser extends Component{
 
 		return(
 
-			<div>
+			<div id="new">
 				<form>
 					<p>New User Form</p>
 					Username: <input /><br/>
 					Password: <input /><br/>
 					<button>Picture Upload</button>
-					<button >Submit</button>
+					<button onClick={this.props.login}>Submit</button>
 					
 				</form>
 			</div>

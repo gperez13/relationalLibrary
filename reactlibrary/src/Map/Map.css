@@ -28,3 +28,10 @@ div {
   margin: 0px;
   padding: 0px
 }
+
+
+#map-marker{
+	background-color: teal;
+	opacity: 1;
+	color: red;
+}

@@ -16,14 +16,14 @@ export class Login extends Component {
 
 	render() {
 		return(
-			<div >
+			<div id="login">
 				<form >
 					Username: <input/><br/>
 					Password: <input/><br/>
-					<button>Login</button>
+					<button onClick={this.props.login}>Login</button>
 
 				</form>
-
+				<br/><br/><br/>
 				<NewUser />
 			</div>
 			)
