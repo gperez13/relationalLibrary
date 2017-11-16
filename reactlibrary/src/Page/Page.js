@@ -23,7 +23,7 @@ class Page extends Component{
 						</div>
 
 						<div class="col-md-8">
-							<Mapp />
+							<Mapp books={this.props}/>
 						</div>
 					</div>
 				</div>

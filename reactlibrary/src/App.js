@@ -22,6 +22,7 @@ class App extends Component {
       state.books = data;
       this.setState(state)
     })
+    console.log(this.state)
 
   }
 

@@ -3,17 +3,12 @@ img {
 	height: 600px;
 }
 
-body {
-	height: 100%;
-	width: device-width;
-	margin: 0;
-	
-}
+
 
 div {
 	background-color: white;
 	height: 100%;
-	width: device-width;
+	width: 100%;
 	margin: 0;
 }
 
@@ -31,7 +26,11 @@ div {
 
 
 #map-marker{
-	background-color: teal;
+	background: teal;
 	opacity: 1;
 	color: red;
 }
+
+style={{
+    position: 'relative', color: 'white', background: 'red',
+    height: 40, width: 60, top: -20, left: -30,    

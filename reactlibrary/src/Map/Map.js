@@ -4,7 +4,10 @@ import Page from '../Page/Page.js'
 
 
 
-  const AnyReactComponent = ({ text }) => <div id="map-marker">{text}</div>;
+  const AnyReactComponent = ({ text }) => <div id="map-marker" style={{
+    position: 'relative', color: '#B10DC9', background: '#DDDDDD',
+    height: 40, width: 60, top: -20, left: -30,     
+  }}>{text}</div>;
 
   const createMapOptions = (maps) =>{
     return {
@@ -241,21 +244,12 @@ class Mapp extends Component {
     this.state = {
       center: {lat: 41.8781, lng: -87.6298},
       zoom: 14,
-      books: []
+
     
     }
   }
 
-    componentDidMount(){
-    fetch('http://extracts.panmacmillan.com/getextracts?authorcontains=tony')
-    .then(response => response.json())
-    .then(data => {
-      const state = this.state;
-      state.books = data;
-      this.setState(state)
-    })
-    console.log(this.state)
-  }
+
 
   
   render() {
@@ -273,13 +267,22 @@ const greatPlaceStyle = {
   left: -MARKER_SIZE / 2,
   top: -MARKER_SIZE / 2
 }
+
+
+
+console.log(this.props.books.books.Extracts)
+
+
+
+
+
     return(
       <div style={{height: "800px", width: "100%", padding: "0", margin: "0", float: "both"}}>
 
         <GoogleMap
         options={createMapOptions}
         style={style}
-     	resetBoundsOnResize = {true}
+      	resetBoundsOnResize = {true}
         bootstrapURLKeys={{
           key: 'AIzaSyAdgdOZrv0EWt8EmgY6c_g98zIX9JBULS8',
           language: 'en'
