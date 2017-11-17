@@ -17,7 +17,7 @@ export class NewUser extends Component{
 				<form>
 					<p>New User Form</p>
 					Username: <input /><br/>
-					Password: <input /><br/>
+					Password: <input type="password"/><br/>
 					<button>Picture Upload</button>
 					<button onClick={this.props.login}>Submit</button>
 					

@@ -240,7 +240,7 @@ class Mapp extends Component {
     super();
     this.state = {
       center: {lat: 41.8781, lng: -87.6298},
-      zoom: 14,
+      zoom: 15,
 
     
     }
@@ -282,11 +282,11 @@ const booksAvailable = this.props.books.books.map((book, i)=>{
 
   const AnyReactComponent = ({ text }) => <div id="map-marker" style={{
     position: 'relative', color: '#B10DC9', background: '#DDDDDD',
-    height: 200, width: 120, top: -20, left: -30,     
+    height: 200, width: 120, top: -20, left: -30, border: "1px solid black", "border-radius": "7px", padding: "5px",    
   }}>{booksAvailable}</div>;
 
     return(
-      <div style={{height: "800px", width: "100%", padding: "0", margin: "0", float: "both"}}>
+      <div style={{height: "800px", width: "100%", padding: "0", margin: "0", float: "both",  border: "1px solid black", "border-radius": "7px"}}>
 
         <GoogleMap
         options={createMapOptions}

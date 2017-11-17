@@ -22,8 +22,9 @@
 
 #root{
   background-color: white;
-  -webkit-transition: width 2s; /* Safari */
-  transition: width 2s;
+
+
+
 }
 
 #footer{
@@ -54,6 +55,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 400px;
+  
 }
 .caption {
   position: absolute;
@@ -97,4 +99,24 @@
 }
 @media (max-aspect-ratio: 16/9) {
   .video-foreground { width: 300%; left: -100%; }
+}
+
+@media {
+  transition-duration: 3s;
+  opacity: 0.2
+}
+
+
+button{
+  border: none;
+  border: 1px solid brown;
+  border-radius: 3px;
+  background-color: #b9d3c2;
+}
+
+button:hover{
+  transition-duration: 1.2s;
+  border: 1px solid black;
+  background-color: white;
+  
 }
