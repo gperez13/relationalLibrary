@@ -5,12 +5,14 @@ class ApplicationController < Sinatra::Base
 	Bundler. require
 
 
+	require './config/environments'
+
 	register Sinatra::CrossOrigin
 
-	ActiveRecord::Base.establish_connection(
-		:adapter => 'postgresql',
-		:database => 'item'
-		)
+	# ActiveRecord::Base.establish_connection(
+	# 	:adapter => 'postgresql',
+	# 	:database => 'item'
+	# 	)
 
 	configure do 
 		enable :cross_origin
