@@ -15,7 +15,7 @@ class App extends Component {
     }
   }
     componentDidMount(){
-    fetch('http://extracts.panmacmillan.com/getextracts?authorcontains=tony')
+    fetch('https://extracts.panmacmillan.com/getextracts?authorcontains=tony')
     .then(response => response.json())
     .then(data => {
       console.log(data, ' what is data', typeof(data), Array.isArray(data), Array.isArray(data.Extracts))
